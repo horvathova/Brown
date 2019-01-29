@@ -29,7 +29,8 @@ int main()
 	int pocet_trajektorii = 100;
 	int pocet_krokov = 20;
 	double **t = new double*[pocet_trajektorii];
-	int poc = 0;
+	int pocet = 0;
+	double p;
 
 	std::ofstream subor_vsetky_traj("subor_vsetky_traj"+to_string(pocet_trajektorii)+".dat");
 	std::ofstream subor_vyhovujuce_traj("subor_vyhov_traj"+to_string(pocet_trajektorii)+".dat");
@@ -59,7 +60,7 @@ int main()
 		if ((t[i][10] > 0) && ((-t[i][10] + 2 * t[i][5]) < 0))
 		{
 			subor_vyhovujuce_traj << 0 << " " << t[i][0] << endl;
-				for (j = 1; j <= pocet_krokov; j++)
+			for (j = 1; j <= pocet_krokov; j++)
 				{
 					subor_vyhovujuce_traj << j << " " << t[i][j] << endl;
 				}
@@ -68,10 +69,10 @@ int main()
 			vektor << "1 " << " " << t[i][5] << endl;
 			vektor << "2 " << " " << t[i][10] << endl;
 			inkrementy2 << t[i][10] << " " << t[i][5] << endl;
-		poc++;
+		pocet++;
 		}
 	}
-	double pravd = poc / (double)pocet_trajektorii;
+	p = pocet / (double)pocet_trajektorii;
 	printf("Pravdepodobnost(pocet vyhovujucich k poctu vsetkych trajektorii): %lf", pravd);
 
 	subor_vsetky_traj.close();
