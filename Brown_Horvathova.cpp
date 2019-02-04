@@ -69,7 +69,7 @@ int main()
 		}
 	}
 	pravd = pocet / (double)pocet_trajektorii;
-	printf("Pravdepodobnost(pocet vyhovujucich k poctu vsetkych trajektorii): %lf", pravd);
+	printf("Pravdepodobnost: %lf", pravd);
 
 	subor_vsetky_traj.close();
 	subor_vyhovujuce_traj.close();
