@@ -28,11 +28,11 @@ int main()
 	int pocet = 0;
 	double pravd;
 
-	std::ofstream subor_vsetky_traj("subor_vsetky_traj"+to_string(pocet_trajektorii)+".dat");
-	std::ofstream subor_vyhovujuce_traj("subor_vyhov_traj"+to_string(pocet_trajektorii)+".dat");
-	std::ofstream vektor("vektor.dat", std::ofstream::out);
-	std::ofstream inkrementy1("inkrementyN_"+to_string(pocet_trajektorii)+".dat", std::ofstream::out);
-	std::ofstream inkrementy2("inkrementy_"+ to_string(pocet_trajektorii) + ".dat", std::ofstream::out);
+	ofstream subor_vsetky_traj("subor_vsetky_traj"+to_string(pocet_trajektorii)+".dat");
+	ofstream subor_vyhovujuce_traj("subor_vyhov_traj"+to_string(pocet_trajektorii)+".dat");
+	ofstream vektor("vektor.dat");
+	ofstream inkrementy1("inkrementyN_"+to_string(pocet_trajektorii)+".dat");
+	ofstream inkrementy2("inkrementy_"+ to_string(pocet_trajektorii) + ".dat");
 
 
 	for (i = 0; i < pocet_trajektorii; i++)
