@@ -74,6 +74,7 @@ int main()
 	subor_vsetky_traj.close();
 	subor_vyhovujuce_traj.close();
 	vektor.close();
+	
 
 	delete(t);
 
